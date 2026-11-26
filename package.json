@@ -1,0 +1,10 @@
+{
+  "name": "apple-passkey-bridge-firefox",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "PoC: caBLE v2 components and diagnostics for cross-device Apple passkeys in Firefox",
+  "scripts": {
+    "test": "node tests/run-tests.mjs"
+  }
+}

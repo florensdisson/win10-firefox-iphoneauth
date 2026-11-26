@@ -1,0 +1,12 @@
+{
+  "extName": { "message": "Apple Passkey Bridge (PoC)" },
+  "extDesc": { "message": "Proof of concept: diagnostics and caBLE v2 components for cross-device Apple passkey sign-in in Firefox." },
+  "diagnose": { "message": "Run diagnostics" },
+  "generateQr": { "message": "Generate test QR (getAssertion)" },
+  "statusTitle": { "message": "Capability status" },
+  "qrTitle": { "message": "caBLE v2 test QR payload" },
+  "blockerTitle": { "message": "Known blocker" },
+  "blockerText": { "message": "Firefox does not implement Web Bluetooth (no navigator.bluetooth in any context). caBLE v2 requires receiving the phone's BLE advert for routing and proximity verification, so the hybrid transport cannot be completed by a pure WebExtension. The proximity check is intentionally not bypassed." },
+  "envBackground": { "message": "Extension background" },
+  "envPage": { "message": "Web page" }
+}

@@ -1,0 +1,11 @@
+body { font: 13px/1.4 system-ui, sans-serif; width: 380px; margin: 10px; }
+h1 { font-size: 15px; }
+h2 { font-size: 13px; margin: 12px 0 4px; }
+.row { display: flex; gap: 8px; }
+button { flex: 1; padding: 6px; }
+table { border-collapse: collapse; width: 100%; }
+td { border-top: 1px solid #ddd; padding: 3px 4px; vertical-align: top; }
+td:first-child { white-space: nowrap; font-weight: 600; }
+pre { word-break: break-all; white-space: pre-wrap; background: #f4f4f4; padding: 6px; max-height: 140px; overflow: auto; }
+.blocker { color: #8a1f1f; }
+#qr-out img, #qr-out canvas { width: 180px; height: 180px; }

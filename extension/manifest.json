@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
+  "version": "0.1.0",
+  "default_locale": "en",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "apple-passkey-bridge@poc.invalid",
+      "strict_min_version": "128.0"
+    }
+  },
+  "background": {
+    "scripts": [
+      "lib/util.js",
+      "lib/cbor.js",
+      "lib/p256.js",
+      "lib/derive.js",
+      "lib/cable-qr.js",
+      "lib/noise.js",
+      "lib/tunnel.js",
+      "lib/diagnostics.js",
+      "background/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content/probe.js", "content/bridge.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "ISOLATED"
+    },
+    {
+      "matches": ["https://*/*"],
+      "js": ["content/shim.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "__MSG_extName__"
+  },
+  "permissions": ["storage", "scripting", "activeTab"],
+  "optional_host_permissions": ["https://*/*", "wss://*/*"]
+}
